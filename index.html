@@ -12,8 +12,8 @@
 
 <body>
   <header class="header">
-    <div class="container header__container">
-      <div class="header-top">
+    <div class="header-top">
+      <div class="container header-top__container">
         <img src="./img/header-logo.svg" alt="Логотип W-Wave Radio" class="header-top__logo">
         <nav class="header-top__nav">
           <ul class="header-top__list">
@@ -56,7 +56,9 @@
           Вход
         </button>
       </div>
-      <div class="header-bottom">
+    </div>
+    <div class="header-bottom">
+      <div class="container header-bottom__container">
         <ul class="header-bottom__list">
           <li class="header-bottom__item">
             <a href="#" class="header-bottom__link">
@@ -89,33 +91,35 @@
             </a>
           </li>
         </ul>
-        <div class="on-air header-bottom__on-air header-bottom__on-air_earlier">
-          <button class="on-air__play-button btn">
-            <svg class="on-air__play-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#A1A6B4"/>
-            </svg>
-          </button>
-          <div class="on-air__desc">
-            <div class="on-air__title">
-              Ранее в эфире
-            </div>
-            <div class="on-air__name">
-              &#171;Музыка&#187;
+        <div class="on-air header-bottom__on-air">
+          <div class="on-air__block on-air__block_earlier">
+            <button class="on-air__play-button btn">
+              <svg class="on-air__play-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#A1A6B4"/>
+              </svg>
+            </button>
+            <div class="on-air__desc">
+              <div class="on-air__title">
+                Ранее в эфире
+              </div>
+              <div class="on-air__name">
+                &#171;Музыка&#187;
+              </div>
             </div>
           </div>
-        </div>
-        <div class="on-air header-bottom__on-air header-bottom__on-air_now">
-          <button class="on-air__play-button btn">
-            <svg class="on-air__play-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#A1A6B4"/>
-            </svg>
-          </button>
-          <div class="on-air__desc">
-            <div class="on-air__title">
-              Сейчас в эфире
-            </div>
-            <div class="on-air__name">
-              &#171;Как так?&#187;
+          <div class="on-air__block on-air__block_now">
+            <button class="on-air__play-button btn">
+              <svg class="on-air__play-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#A1A6B4"/>
+              </svg>
+            </button>
+            <div class="on-air__desc">
+              <div class="on-air__title">
+                Сейчас в эфире
+              </div>
+              <div class="on-air__name">
+                &#171;Как так?&#187;
+              </div>
             </div>
           </div>
         </div>

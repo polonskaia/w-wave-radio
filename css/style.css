@@ -57,13 +57,22 @@
     url('../fonts/MullerBold.woff') format('woff');
 }
 
+:root {
+  --main-color: #121723;
+  --light-grey: #e6e8ec;
+  --grey: #a1a6b4;
+
+}
+
 html {
   font-family: 'Muller', Arial, Helvetica, sans-serif;
+  color: var(--main-color);
   scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+  color: var(--main-color);
 }
 
 ul {
@@ -84,4 +93,115 @@ ul {
   max-width: 1310px;
 }
 
+/* header-top */
+.header-top {
+  padding: 20px 0;
+}
 
+.header-top__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-top__logo,
+.header-top__nav {
+  margin-right: 80px;
+}
+
+.header-top__list {
+  display: flex;
+}
+
+.header-top__item:not(:last-child) {
+  margin-right: 59px;
+}
+
+.header-top__link {
+  font-size: 20px;
+}
+
+.header-top__search-form {
+  margin-right: 24px;
+}
+
+.header-top__sign-in {
+  padding: 9px 31px;
+  border: 2px solid var(--main-color);
+  border-radius: 77px;
+  font-weight: 500;
+}
+
+/* header-bottom */
+.header-bottom {
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.header-bottom__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-bottom__list {
+  display: flex;
+}
+
+.header-bottom__item:not(:last-child) {
+  margin-right: 53px;
+}
+
+.header-bottom__on-air {
+  display: flex;
+  padding: 7px 0;
+}
+
+.on-air__block {
+  display: flex;
+  padding: 0 10px;
+}
+
+.on-air__block_earlier {
+  border-left: 1px solid var(--light-grey);
+  border-right: 1px solid var(--light-grey);
+}
+
+.on-air__block_now {
+  border-right: 1px solid var(--light-grey);
+}
+
+.on-air__desc {
+  width: 121px;
+}
+
+.on-air__play-button {
+  margin-right: 8px;
+}
+
+.on-air__title {
+  margin-bottom: 2px;
+  font-size: 12px;
+  color: var(--grey);
+}
+
+.header-bottom__age-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 58px;
+  background-color: var(--light-grey);
+}
+
+.age-rating__value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  font-size: 12px;
+  color: var(--grey);
+  background-color: #fff;
+}
