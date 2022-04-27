@@ -720,7 +720,7 @@ ul {
   position: absolute;
   left: 0;
   top: 30px;
-  display: none;
+  /* display: none; */
   padding-top: 10px;
   width: 255px;
   border: 1px solid var(--shade-grey);
@@ -742,6 +742,10 @@ ul {
   transition: color .3s ease-in, background-color .3s ease-in;
 }
 
+.select-item__button:focus {
+  outline: none;
+}
+
 .select__item_hidden {
   position: absolute;
   visibility: hidden;
@@ -756,7 +760,7 @@ ul {
   background-color: rgba(230, 232, 236, 0.4);
 }
 
-.select__item:focus {
+.select__item:focus-within {
   outline: none;
   color: var(--main-color);
   background-color: var(--light-primary);
