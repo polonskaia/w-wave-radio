@@ -995,7 +995,11 @@ ul {
 }
 
 .accordion-item__trigger-btn .accordion-item__btn-arrow {
-  transition: fill .3s ease-in;
+  transition: fill .3s ease-in, transform .5s;
+}
+
+.accordion-item__btn-arrow.rotate {
+  transform: rotate(180deg);
 }
 
 .accordion-item__trigger-btn .accordion-item__btn-arrow circle,
@@ -1043,25 +1047,18 @@ ul {
 }
 
 .accordion-item__content {
-  position: absolute;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  overflow: hidden;
   column-count: auto;
   column-width: 160px;
   column-gap: 30px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .3s ease-in, visibility .3s ease-in;
+  max-height: 0;
+  transition: all .5s;
 }
 
-.accordion-item__content_is-open {
-  position: relative;
-  opacity: 1;
-  visibility: visible;
-}
-
-.accordion-item__btn-arrow_rotate {
-  transform: rotate(-180deg);
+.accordion__item_active .accordion-item__content {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  max-height: 1000px;
 }
 
 .accordion-item__content-link {
@@ -1069,6 +1066,10 @@ ul {
   color: var(--white);
   line-height: 2;
   transition: color .3s ease-in;
+}
+
+.accordion-item__content-link_active {
+  color: var(--light-primary);
 }
 
 .accordion-item__content-link:hover {
@@ -1088,6 +1089,85 @@ ul {
   width: 350px;
 }
 
+.section-guests__guest-card {
+  display: none;
+  padding-top: 234px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.guest-card_active {
+  display: block;
+}
+
+.section-guests__guest-card_denisov {
+  background-image: url('../img/denisov.jpg');
+}
+
+.section-guests__guest-card_mechnikov {
+  background-image: url('../img/mechnikov.jpg');
+}
+
+.section-guests__guest-card_prusino {
+  background-image: url('../img/prusino.jpg');
+}
+
+.section-guests__guest-card_kalitnikov {
+  background-image: url('../img/kalitnikov.jpg');
+}
+
+.section-guests__guest-card_martynova {
+  background-image: url('../img/martynova.jpg');
+}
+
+.section-guests__guest-card_vasileva {
+  background-image: url('../img/vasileva.jpg');
+}
+
+.section-guests__guest-card_pak {
+  background-image: url('../img/pak.jpg');
+}
+
+.section-guests__guest-card_danilova {
+  background-image: url('../img/danilova.jpg');
+}
+
+.section-guests__guest-card_sverdlov {
+  background-image: url('../img/sverdlov.jpg');
+}
+
+.section-guests__guest-card_nazarova {
+  background-image: url('../img/nazarova.jpg');
+}
+
+.section-guests__guest-card_zhadan {
+  background-image: url('../img/zhadan.jpg');
+}
+
+.section-guests__guest-card_ozerova {
+  background-image: url('../img/ozerova.jpg');
+}
+
+.section-guests__guest-card_kazanov {
+  background-image: url('../img/kazanov.jpg');
+}
+
+.section-guests__guest-card_lurie {
+  background-image: url('../img/lurie.jpg');
+}
+
+.section-guests__guest-card_bulgakova {
+  background-image: url('../img/bulgakova.jpg');
+}
+
+.section-guests__guest-card_dubov {
+  background-image: url('../img/dubov.jpg');
+}
+
+.section-guests__guest-card_faure {
+  background-image: url('../img/faure.jpg');
+}
+
 .section-guests__guest-card_default {
   padding: 156px 0 48px;
   text-align: center;
@@ -1097,6 +1177,37 @@ ul {
   background-position: top 49px center;
 }
 
+.guest-card__socials {
+  margin-bottom: 10px;
+}
+
+.guest-card__social-link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.guest-card__name {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white);
+}
+
 .guest-card__desc {
+  margin-bottom: 30px;
+  line-height: 1.8;
   color: var(--grey);
+}
+
+.section-guests__guest-card_default .guest-card__desc {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.guest-card__on-air {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 2px solid var(--light-primary);
+  border-radius: 77px;
+  font-weight: 500;
+  color: var(--light-primary);
 }
