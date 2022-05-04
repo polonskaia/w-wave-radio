@@ -423,6 +423,7 @@ ul {
   background-color: var(--white);
   background-repeat: no-repeat;
   background-position: center left;
+  transition: visibility .3s ease-in, opacity .3s ease-in;
 }
 
 .section-podcasts__item:nth-child(2n+1) {
@@ -624,6 +625,12 @@ ul {
   transition: background-color .3s ease-in, color .3s ease-in, border .3s ease-in;
 }
 
+.section-podcasts__button.hidden {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
 .section-podcasts__button:hover {
   color: var(--white);
   background-color: var(--primary);
@@ -703,6 +710,10 @@ ul {
   pointer-events: none;
 }
 
+.select__button_is-open::after {
+  transform: rotate(-180deg) translateY(60%);
+}
+
 .select__button:hover {
   background-color: rgba(230, 232, 236, 0.4);
 }
@@ -720,7 +731,7 @@ ul {
   position: absolute;
   left: 0;
   top: 30px;
-  /* display: none; */
+  display: none;
   padding-top: 10px;
   width: 255px;
   border: 1px solid var(--shade-grey);
@@ -735,15 +746,14 @@ ul {
 }
 
 .select__item {
-  padding: 12px 0 12px 12px;
+  height: 40px;
   border-bottom: 1px solid var(--shade-grey);
   color: var(--grey);
   cursor: pointer;
-  transition: color .3s ease-in, background-color .3s ease-in;
 }
 
-.select-item__button:focus {
-  outline: none;
+.select__item:last-child {
+  border-bottom: none;
 }
 
 .select__item_hidden {
@@ -752,21 +762,25 @@ ul {
   opacity: 0;
 }
 
-.select__item:last-child {
-  border-bottom: none;
+.select-item__button {
+  padding-left: 12px;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  transition: color .3s ease-in, background-color .3s ease-in;
 }
 
-.select__item:hover {
+.select-item__button:hover {
   background-color: rgba(230, 232, 236, 0.4);
 }
 
-.select__item:focus-within {
+.select-item__button:focus {
   outline: none;
   color: var(--main-color);
   background-color: var(--light-primary);
 }
 
-.select__item:active {
+.select-item__button:active {
   color: var(--main-color);
   background-color: var(--light-grey);
 }
@@ -971,22 +985,16 @@ ul {
   position: relative;
 }
 
-.accordion-item__header {
-  border-top: 1px solid var(--grey);
-  border-bottom: 1px solid var(--grey);
-}
-
-.accordion-item__header {
-  margin-top: -1px;
-}
-
 .accordion-item__trigger-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 23px 0;
+  margin-top: -1px;
+  padding: 25px 0 21px 0;
   width: 100%;
   height: 100%;
+  border-top: 1px solid var(--grey);
+  border-bottom: 1px solid var(--grey);
   font-size: 20px;
   font-weight: 500;
   line-height: 1;
@@ -1044,6 +1052,15 @@ ul {
 
 .accordion-item__trigger-btn:active .accordion-item__btn-arrow {
   fill: var(--light-primary);
+}
+
+.accordion__item_active .accordion-item__trigger-btn {
+  border-top: 1px solid var(--light-primary);
+  border-bottom: 1px solid var(--light-primary);
+}
+
+.accordion__item_active .accordion-item__trigger-btn:focus {
+  background-color: transparent;
 }
 
 .accordion-item__content {
@@ -1178,11 +1195,32 @@ ul {
 }
 
 .guest-card__socials {
-  margin-bottom: 10px;
+  margin-bottom: 11px;
+  padding-left: 3px;
 }
 
 .guest-card__social-link:not(:last-child) {
   margin-right: 30px;
+}
+
+.guest-card__social-link .guest-card__social-icon path {
+  transition: fill .3s ease-in;
+}
+
+.guest-card__social-link:hover .guest-card__social-icon path {
+  fill: var(--primary);
+}
+
+.guest-card__social-link:focus {
+  outline: none;
+}
+
+.guest-card__social-link:focus .guest-card__social-icon path {
+  fill: var(--light-primary);
+}
+
+.guest-card__social-link:active .guest-card__social-icon path {
+  fill: var(--shade-primary);
 }
 
 .guest-card__name {
@@ -1203,11 +1241,29 @@ ul {
   line-height: 1;
 }
 
-.guest-card__on-air {
+.guest-card__on-air-link {
   display: inline-block;
   padding: 10px 18px;
   border: 2px solid var(--light-primary);
   border-radius: 77px;
   font-weight: 500;
   color: var(--light-primary);
+  transition: border .3s ease-in, color .3s ease-in, background-color .3s ease-in;
+}
+
+.guest-card__on-air-link:hover {
+  color: var(--white);
+  background-color: var(--light-primary);
+}
+
+.guest-card__on-air-link:focus {
+  outline: none;
+  border: 2px solid var(--primary);
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+.guest-card__on-air-link:active {
+  border: 2px solid var(--shade-primary);
+  background-color: var(--shade-primary);
 }
