@@ -673,9 +673,10 @@ ul {
   margin-bottom: 12px;
 }
 
-.select__desc {
+.select__heading {
   margin-bottom: 8px;
   font-size: 16px;
+  font-weight: 400;
   color: var(--grey);
 }
 
@@ -1267,3 +1268,31 @@ ul {
   border: 2px solid var(--shade-primary);
   background-color: var(--shade-primary);
 }
+
+/* playlists */
+.section-playlists__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section-playlists__left-block {
+  margin-right: 30px;
+  max-width: 350px;
+}
+
+.section-playlists__radio-block {
+  margin-bottom: 32px;
+}
+
+.section-playlists__age-rating-block {
+  padding-top: 30px;
+  border-top: 1px solid var(--shade-grey);
+}
+
+.section-playlists__card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
