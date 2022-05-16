@@ -34,7 +34,7 @@
               </a>
             </li>
             <li class="header-top__item">
-              <a href="#" class="header-top__link">
+              <a href="#playlists" class="header-top__link">
                 Плейлисты
               </a>
             </li>
@@ -1514,7 +1514,7 @@
       </div>
     </section>
 <!-- section-playlists -->
-     <section class="section-playlists">
+     <section class="section-playlists" id="playlists">
        <div class="container section-playlists__container">
          <div class="section-playlists__left-block">
           <div class="section-playlists__radio-block">
@@ -1526,68 +1526,36 @@
             </h3>
             <ul class="section-playlists__radio-list">
               <li class="section-playlists__radio-item">
-                <label class="section-playlists__radio-label">
-                  <input type="radio" name="postpunk" class="section-playlists__radio-input">
-                  <span class="section-playlists__radio-circle">
-                    Постпанк
-                  </span>
-                </label>
+                <input type="radio" name="genre" id="postpunk" value="Постпанк" checked class="section-playlists__radio-input">
+                <label class="section-playlists__radio-label" for="postpunk">Постпанк</label>
               </li>
               <li class="section-playlists__radio-item">
-                <label class="section-playlists__radio-label">
-                  <input type="radio" name="hardcore" class="section-playlists__radio-input">
-                  <span class="section-playlists__radio-circle">
-                    Хардкор
-                  </span>
-                </label>
+                <input type="radio" name="genre" id="hardcore" value="Хардкор" class="section-playlists__radio-input">
+                <label class="section-playlists__radio-label" for="hardcore">Хардкор</label>
               </li>
               <li class="section-playlists__radio-item">
-                <label class="section-playlists__radio-label">
-                  <input type="radio" name="punk_rock" class="section-playlists__radio-input">
-                  <span class="section-playlists__radio-circle">
-                    Панк-рок
-                  </span>
-                </label>
+                <input type="radio" name="genre" id="punk_rock" value="Панк-рок" class="section-playlists__radio-input">
+                <label class="section-playlists__radio-label" for="punk_rock">Панк-рок</label>
               </li>
               <li class="section-playlists__radio-item">
-                <label class="section-playlists__radio-label">
-                  <input type="radio" name="rock" class="section-playlists__radio-input">
-                  <span class="section-playlists__radio-circle">
-                    Рок
-                  </span>
-                </label>
+                <input type="radio" name="genre" id="rock" value="Рок" class="section-playlists__radio-input">
+                <label class="section-playlists__radio-label" for="rock">Рок</label>
               </li>
               <li class="section-playlists__radio-item">
-                <label class="section-playlists__radio-label">
-                  <input type="radio" name="progressive_rock" class="section-playlists__radio-input">
-                  <span class="section-playlists__radio-circle">
-                    Прогрессивный рок
-                  </span>
-                </label>
+                <input type="radio" name="genre" id="progressive_rock" value="Прогрессивный рок" class="section-playlists__radio-input">
+                <label class="section-playlists__radio-label" for="progressive_rock">Прогрессивный рок</label>
               </li>
               <li class="section-playlists__radio-item">
-                <label class="section-playlists__radio-label">
-                  <input type="radio" name="electonic_music" class="section-playlists__radio-input">
-                  <span class="section-playlists__radio-circle">
-                    Электронная музыка
-                  </span>
-                </label>
+                <input type="radio" name="genre" id="electronic_music" value="Электронная музыка" class="section-playlists__radio-input">
+                <label class="section-playlists__radio-label" for="electronic_music">Электронная музыка</label>
               </li>
               <li class="section-playlists__radio-item">
-                <label class="section-playlists__radio-label">
-                  <input type="radio" name="classical_music" class="section-playlists__radio-input">
-                  <span class="section-playlists__radio-circle">
-                    Классическая музыка
-                  </span>
-                </label>
+                <input type="radio" name="genre" id="classical_music" value="Классическая музыка" class="section-playlists__radio-input">
+                <label class="section-playlists__radio-label" for="classical_music">Классическая музыка</label>
               </li>
               <li class="section-playlists__radio-item">
-                <label class="section-playlists__radio-label">
-                  <input type="radio" name="sounds_of_nature" class="section-playlists__radio-input">
-                  <span class="section-playlists__radio-circle">
-                    Звуки природы и шум города
-                  </span>
-                </label>
+                <input type="radio" name="genre" id="sounds_of_nature" value="Звуки природы и шум города" class="section-playlists__radio-input">
+                <label class="section-playlists__radio-label" for="sounds_of_nature">Звуки природы и шум города</label>
               </li>
             </ul>
            </div>
@@ -1607,100 +1575,220 @@
 
           <div class="section-playlists__right-block">
             <ul class="section-playlists__card-list">
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  Ploho
-                </h3>
-                <div class="card-item__desc">
-                  3 последних альбома
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_ploho playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/rus.svg" alt="Russia">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/ploho.jpg" alt="Ploho" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      Ploho
+                    </h3>
+                    <div class="playlist-card__desc">
+                      3 последних альбома
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  Molchat Doma
-                </h3>
-                <div class="card-item__desc">
-                  Все песни
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_molchat-doma playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/rus.svg" alt="Russia">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/molchat-doma.jpg" alt="Molchat Doma" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      Molchat Doma
+                    </h3>
+                    <div class="playlist-card__desc">
+                      Все песни
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  Motorama
-                </h3>
-                <div class="card-item__desc">
-                  Все синглы
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_motorama playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/rus.svg" alt="Russia">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/motorama.jpg" alt="Motorama" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      Motorama
+                    </h3>
+                    <div class="playlist-card__desc">
+                      Все синглы
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  Human Tetris
-                </h3>
-                <div class="card-item__desc">
-                  3 последних альбома
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_human-tetris playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/rus.svg" alt="Russia">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/human-tetris.jpg" alt="Human Tetris" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      Human Tetris
+                    </h3>
+                    <div class="playlist-card__desc">
+                      3 последних альбома
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  Буерак
-                </h3>
-                <div class="card-item__desc">
-                  Все EP
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_buerak playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/rus.svg" alt="Russia">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/buerak.jpg" alt="Буерак" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      Буерак
+                    </h3>
+                    <div class="playlist-card__desc">
+                      Все EP
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  Июльские Дни
-                </h3>
-                <div class="card-item__desc">
-                  Альбом «Колокол»
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_july-days playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/rus.svg" alt="Russia">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/july-days.jpg" alt="Июльские Дни" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      Июльские Дни
+                    </h3>
+                    <div class="playlist-card__desc">
+                      Альбом «Колокол»
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  Joy Division
-                </h3>
-                <div class="card-item__desc">
-                  Лучшее за всё время
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_joy-division playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/uk.svg" alt="United Kingdom">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/joy-division.jpg" alt="Joy Division" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      Joy Division
+                    </h3>
+                    <div class="playlist-card__desc">
+                      Лучшее за всё время
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  The Cure
-                </h3>
-                <div class="card-item__desc">
-                  Лучшее за всё время
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_the-cure playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/uk.svg" alt="United Kingdom">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/the-cure.jpg" alt="The Cure" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      The Cure
+                    </h3>
+                    <div class="playlist-card__desc">
+                      Лучшее за всё время
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  The Smiths
-                </h3>
-                <div class="card-item__desc">
-                  Период 1984-1988
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_the-smiths playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/uk.svg" alt="United Kingdom">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/the-smiths.jpg" alt="The Smiths" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      The Smiths
+                    </h3>
+                    <div class="playlist-card__desc">
+                      Период 1984-1988
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  New Order
-                </h3>
-                <div class="card-item__desc">
-                  Хиты
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_new-order playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/uk.svg" alt="United Kingdom">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/new-order.jpg" alt="New Order" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      New Order
+                    </h3>
+                    <div class="playlist-card__desc">
+                      Хиты
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  Bauhaus
-                </h3>
-                <div class="card-item__desc">
-                  Все синглы
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_bauhaus playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/uk.svg" alt="United Kingdom">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/bauhaus.jpg" alt="Bauhaus" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      Bauhaus
+                    </h3>
+                    <div class="playlist-card__desc">
+                      Все синглы
+                    </div>
+                  </div>
                 </div>
               </li>
-              <li class="section-playlists__card-item card-item">
-                <h3 class="card-item__heading">
-                  Gang Of Four
-                </h3>
-                <div class="card-item__desc">
-                  3 последних альбома
+              <li class="section-playlists__card-item">
+                <div class="section-playlists__playlist-card section-playlists__playlist-card_gang-of-four playlist-card">
+                  <div class="playlist-card__country">
+                    <img src="./img/uk.svg" alt="United Kingdom">
+                  </div>
+                  <div class="playlist-card__preview">
+                    <img src="./img/gang-of-four.jpg" alt="Gang Of Four" class="playlist-card__img">
+                  </div>
+                  <div class="playlist-card__text-content">
+                    <h3 class="playlist-card__heading">
+                      Gang Of Four
+                    </h3>
+                    <div class="playlist-card__desc">
+                      3 последних альбома
+                    </div>
+                  </div>
                 </div>
               </li>
             </ul>
