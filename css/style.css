@@ -1330,18 +1330,15 @@ ul {
   margin-right: 16px;
   background-repeat: no-repeat;
   background-position: center center;
-}
-
-.section-playlists__radio-input:not(:disabled):not(:checked)+.section-playlists__radio-label::before {
   transition: border-color .3s ease-in;
-}
-
-.section-playlists__radio-input:not(:disabled):not(:checked)+.section-playlists__radio-label:hover::before {
-  border-color: var(--primary);
 }
 
 .section-playlists__radio-input:checked+.section-playlists__radio-label::before {
   border: 7px solid var(--primary);
+}
+
+.section-playlists__radio-input:hover+.section-playlists__radio-label::before {
+  border-color: var(--primary);
 }
 
 .section-playlists__age-rating-block {
