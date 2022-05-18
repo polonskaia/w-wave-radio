@@ -39,8 +39,8 @@
               </a>
             </li>
             <li class="header-top__item">
-              <a href="#" class="header-top__link">
-                О нас
+              <a href="#about" class="header-top__link">
+                О&nbsp;нас
               </a>
             </li>
           </ul>
@@ -858,9 +858,9 @@
         <h2 class="section-guests__heading section-heading">
           Гости
         </h2>
-        <p class="section-guests__desc-title">
+        <h3 class="section-guests__desc-title">
           У нас бывают:
-        </p>
+        </h3>
         <p class="section-guests__desc">
           Блогеры, арт-критики и деятели искусства, музыканты, молодые учёные и люди науки, историки, филологи и много других интересных гостей!
         </p>
@@ -1816,12 +1816,12 @@
             Будь с нами на одной волне!
           </h2>
           <div class="section-promo__wave-line"></div>
-          <div class="section-promo__descr">
+          <p class="section-promo__desc">
             Друзья, рады представить вам продукт нашего производства! Да-да, несмотря на то, что мы только начали свой путь радиовещателей, нам хочется, чтобы вы могли как следует нас расслышать :)
-          </div>
-          <div class="section-promo__descr">
+          </p>
+          <p class="section-promo__desc">
             Итак, встречайте! Портативный радиоприёмник-колонка <span class="radio-name">W-Wave 1.0 xm.</span> Тщательный подбор всех деталей, ручная сборка, качественный звук. Пока доступно только 60&nbspштук в 3 цветах, но мы активно трудимся над новыми партиями и дизайном. Спешите приобрести!
-          </div>
+          </p>
           <div class="section-promo__price">
             2800 руб
           </div>
@@ -1840,6 +1840,68 @@
             Купить на Яндекс.Маркет
           </a>
         </div>
+      </div>
+    </section>
+<!-- section-about -->
+    <section class="section-about" id="about">
+      <div class="container section-about__container">
+        <h2 class="section-heading section-about__heading">
+          О нас
+        </h2>
+        <div class="section-about__text">
+          <p class="section-about__slogan">
+            Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!
+          </p>
+          <p class="section-about__desc">
+            Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы можете поделиться обратной связью о наших предеачах, темах, подборках и вообще обо всём! Это можно сделать либо написав нам в форме ниже, либо кликнув на наши соцсети в подвале сайта. Спасибо! Услышимся! :)
+          </p>
+        </div>
+        <ul class="section-about__list">
+          <li class="section-about__item section-about__item_gutenberg">
+            <h3 class="about-card__heading">
+              Дмитрий Гутенберг
+            </h3>
+            <p class="about-card__desc">
+              Эксперт (ну, почти) по всем вопросам (почти).
+            </p>
+          </li>
+          <li class="section-about__item section-about__item_vasileva">
+            <h3 class="about-card__heading">
+              Анна Васильева
+            </h3>
+            <p class="about-card__desc">
+              Как я здесь оказалась? А&nbsp;главное — зачем?
+            </p>
+          </li>
+          <li class="section-about__item section-about__item_dmitrievsky">
+            <h3 class="about-card__heading">
+              Пётр Дмитриевский
+            </h3>
+            <p class="about-card__desc">
+              Господа! Внимание!! Благодарю за&nbsp;внимание!!!
+            </p>
+          </li>
+          <li class="section-about__item section-about__item_fleganova">
+            <h3 class="about-card__heading">
+              Татьяна Флеганова
+            </h3>
+            <p class="about-card__desc">
+              Одна я в пальто стою красивая, а&nbsp;вокруг...
+            </p>
+          </li>
+        </ul>
+        <form class="section-about__form">
+          <textarea name="message" placeholder="Что скажете?" class="section-about__textarea"></textarea>
+          <div class="section-about__input-wrapper">
+            <input type="text" name="name" placeholder="Имя" class="section-about__input">
+            <input type="email" name="e-mail" placeholder="E-mail" class="section-about__input">
+          </div>
+          <button type="submit" class="btn section-about__submit-button">
+            Отправить
+          </button>
+          <input type="checkbox" id="checkbox" name="check" checked required value="Согласен на обработку персональных данных" class="section-about__check">
+          <label for="checkbox" class="section-about__check-label">Согласен на обработку персональных данных</label>
+        </form>
       </div>
     </section>
   </main>
