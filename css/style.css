@@ -1207,23 +1207,28 @@ ul {
   margin-right: 30px;
 }
 
-.guest-card__social-link .guest-card__social-icon path {
+.guest-card__social-link .guest-card__social-icon path,
+.social-list__link .social-list__icon path {
   transition: fill .3s ease-in;
 }
 
-.guest-card__social-link:hover .guest-card__social-icon path {
+.guest-card__social-link:hover .guest-card__social-icon path,
+.social-list__link:hover .social-list__icon path {
   fill: var(--primary);
 }
 
-.guest-card__social-link:focus {
+.guest-card__social-link:focus,
+.social-list__link:focus {
   outline: none;
 }
 
-.guest-card__social-link:focus .guest-card__social-icon path {
+.guest-card__social-link:focus .guest-card__social-icon path,
+.social-list__link:focus .social-list__icon path {
   fill: var(--light-primary);
 }
 
-.guest-card__social-link:active .guest-card__social-icon path {
+.guest-card__social-link:active .guest-card__social-icon path,
+.social-list__link:active .social-list__icon path {
   fill: var(--shade-primary);
 }
 
@@ -1827,4 +1832,81 @@ ul {
 .section-about__check:focus+.section-about__check-label::before {
   border: 1px solid var(--light-primary);
   background-color: #e6e8ec1a;
+}
+
+/* footer */
+.footer {
+  background-color: var(--light-black);
+}
+
+.footer-menu__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 94px;
+  padding-bottom: 74px;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__social-list {
+  display: flex;
+  padding-left: 4px;
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.footer__logo {
+  margin-bottom: 18px;
+}
+
+.footer__logo:focus {
+  outline: none;
+}
+
+.footer-nav__list {
+  column-count: 3;
+  column-gap: 124px;
+  max-width: 445px;
+}
+
+.footer-nav__item {
+  margin-bottom: 20px;
+}
+
+.footer-nav__link {
+  color: var(--white);
+  transition: color .3s ease-in;
+}
+
+.footer-nav__link:hover {
+  color: var(--primary);
+}
+
+.footer-nav__link:focus {
+  outline: none;
+  color: var(--light-primary);
+}
+
+.footer-nav__link:active {
+  color: var(--shade-primary);
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  padding-top: 21px;
+  padding-bottom: 10px;
+  background-image: url('../img/wave-line-footer.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.footer__copyright-text {
+  color: var(--grey);
 }
