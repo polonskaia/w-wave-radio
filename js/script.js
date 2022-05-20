@@ -11,11 +11,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const guestLinks = document.querySelectorAll('.accordion-item__content-link');
   const guestCards = document.querySelectorAll('.section-guests__guest-card');
   const guestCardDefault = document.querySelector('.section-guests__guest-card_default');
+  const viewsButtons = document.querySelectorAll('.podcasts-item__activity-button_views');
+  const likesButtons = document.querySelectorAll('.podcasts-item__activity-button_likes');
+  const linksButtons = document.querySelectorAll('.podcasts-item__activity-button_links');
 
   hidePodcastsCards();
   activateCustomSelect();
   activateAccordion();
   activateTabsInAccordion();
+
+  viewsButtons.forEach((viewBtn) => {
+    viewBtn.ariaLabel = `${viewBtn.textContent} просмотров`;
+  });
+
+  likesButtons.forEach((likeBtn) => {
+    likeBtn.ariaLabel = `${likeBtn.textContent} лайков`;
+  });
+
+  linksButtons.forEach((linkBtn) => {
+    linkBtn.ariaLabel = `${linkBtn.textContent} ссылок`;
+  });
+
+  selectButton.ariaLabel = `Выбрать автора. Выбранный автор - ${selectButton.innerHTML}`;
 
   function hidePodcastsCards() {
     if (podcastsCards.length > 8) {
@@ -44,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.stopPropagation();
 
         selectButton.innerHTML = event.target.innerHTML;
+        selectButton.ariaLabel = `Выбрать автора. Выбранный автор - ${selectButton.innerHTML}`;
         selectList.classList.remove('select__list_visible');
         selectButton.classList.remove('select__button_is-open');
 
