@@ -7,7 +7,10 @@
   <title>W-Wave Radio</title>
   <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8.2.4/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script defer src="https://unpkg.com/swiper@8.2.4/swiper-bundle.min.js"></script>
+  <script defer src="./js/swiper.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
 
@@ -1856,40 +1859,62 @@
             Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы можете поделиться обратной связью о наших передачах, темах, подборках и вообще обо всём! Это можно сделать либо написав нам в форме ниже, либо кликнув на наши соцсети в подвале сайта. Спасибо! Услышимся! :)
           </p>
         </div>
-        <ul class="section-about__list">
-          <li class="section-about__item section-about__item_gutenberg">
-            <h3 class="about-card__heading">
-              Дмитрий Гутенберг
-            </h3>
-            <p class="about-card__desc">
-              Эксперт (ну, почти) по всем вопросам (почти).
-            </p>
-          </li>
-          <li class="section-about__item section-about__item_vasileva">
-            <h3 class="about-card__heading">
-              Анна Васильева
-            </h3>
-            <p class="about-card__desc">
-              Как я здесь оказалась? А&nbsp;главное — зачем?
-            </p>
-          </li>
-          <li class="section-about__item section-about__item_dmitrievsky">
-            <h3 class="about-card__heading">
-              Пётр Дмитриевский
-            </h3>
-            <p class="about-card__desc">
-              Господа! Внимание!! Благодарю за&nbsp;внимание!!!
-            </p>
-          </li>
-          <li class="section-about__item section-about__item_fleganova">
-            <h3 class="about-card__heading">
-              Татьяна Флеганова
-            </h3>
-            <p class="about-card__desc">
-              Одна я в пальто стою красивая, а&nbsp;вокруг...
-            </p>
-          </li>
-        </ul>
+        <div class="buttons-swiper">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper">
+          <ul class="swiper-wrapper section-about__list">
+            <li class="swiper-slide section-about__item section-about__item_gutenberg">
+              <h3 class="about-card__heading">
+                Дмитрий Гутенберг
+              </h3>
+              <p class="about-card__desc">
+                Эксперт (ну, почти) по всем вопросам (почти).
+              </p>
+            </li>
+            <li class="swiper-slide section-about__item section-about__item_vasileva">
+              <h3 class="about-card__heading">
+                Анна Васильева
+              </h3>
+              <p class="about-card__desc">
+                Как я здесь оказалась? А&nbsp;главное — зачем?
+              </p>
+            </li>
+            <li class="swiper-slide section-about__item section-about__item_dmitrievsky">
+              <h3 class="about-card__heading">
+                Пётр Дмитриевский
+              </h3>
+              <p class="about-card__desc">
+                Господа! Внимание!! Благодарю за&nbsp;внимание!!!
+              </p>
+            </li>
+            <li class="swiper-slide section-about__item section-about__item_fleganova">
+              <h3 class="about-card__heading">
+                Татьяна Флеганова
+              </h3>
+              <p class="about-card__desc">
+                Одна я в пальто стою красивая, а&nbsp;вокруг...
+              </p>
+            </li>
+            <li class="swiper-slide section-about__item section-about__item_prokopiev">
+              <h3 class="about-card__heading">
+                Фёдор Прокопьев
+              </h3>
+              <p class="about-card__desc">
+                Привет! Я фотограф, музыкант, ведущий
+              </p>
+            </li>
+            <li class="swiper-slide section-about__item section-about__item_kortneva">
+              <h3 class="about-card__heading">
+                Светлана Кортнева
+              </h3>
+              <p class="about-card__desc">
+                Художник-оформитель. Оформляю
+              </p>
+            </li>
+          </ul>
+        </div>
         <form class="section-about__form">
           <textarea name="message" placeholder="Что скажете?" class="section-about__textarea"></textarea>
           <div class="section-about__input-wrapper">

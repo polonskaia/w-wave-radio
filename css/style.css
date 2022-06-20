@@ -1658,6 +1658,43 @@ ul {
   color: var(--grey);
 }
 
+.buttons-swiper {
+  position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 48px;
+  height: 48px;
+  bottom: 0;
+  top: 150px;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev {
+  left: -75px;
+}
+
+.swiper-button-next {
+  right: -81px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '';
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+}
+
+.swiper-button-next::after {
+  background-image: url('../img/swiper-btn-next.svg');
+}
+
+.swiper-button-prev::after {
+  background-image: url('../img/swiper-btn-prev.svg');
+}
+
 .section-about__list {
   display: flex;
   justify-content: space-between;
@@ -1689,6 +1726,14 @@ ul {
 
 .section-about__item_fleganova {
   background-image: url('../img/about-fleganova.jpg');
+}
+
+.section-about__item_prokopiev {
+  background-image: url('../img/about-prokopiev.jpg');
+}
+
+.section-about__item_kortneva {
+  background-image: url('../img/about-kortneva.jpg');
 }
 
 .about-card__heading {
