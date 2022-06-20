@@ -90,8 +90,8 @@ ul {
 
 .container {
   margin: 0 auto;
-  padding: 0 50px;
-  max-width: 1210px;
+  padding: 0 100px;
+  max-width: 1310px;
 }
 
 .btn {
@@ -306,11 +306,11 @@ ul {
   padding-bottom: 94px;
   background-image: url('../img/microphone.jpg');
   background-repeat: no-repeat;
-  background-position: center right 48px;
+  background-position: top 35px right 100px;
 }
 
 .section-hero__content {
-  max-width: 635px;
+  width: 58%;
 }
 
 .section-hero__heading {
@@ -965,7 +965,7 @@ ul {
 
 .section-guests__desc {
   margin-bottom: 50px;
-  max-width: 825px;
+  width: 70%;
   font-size: 20px;
   line-height: 1.6;
   color: var(--grey);
@@ -1281,7 +1281,7 @@ ul {
 .section-playlists__container {
   display: flex;
   justify-content: space-between;
-  padding: 94px 35px 79px 50px;
+  padding: 94px 85px 79px 100px;
 }
 
 .section-playlists__left-block {
@@ -1517,11 +1517,11 @@ ul {
   padding-bottom: 133px;
   background-image: url('../img/radio.png');
   background-repeat: no-repeat;
-  background-position: top 94px left 48px;
+  background-position: top 94px left 95px;
 }
 
 .section-promo__content {
-  max-width: 445px;
+  width: 40%;
 }
 
 .section-promo__heading {
@@ -1632,7 +1632,7 @@ ul {
   padding-bottom: 94px;
   background-image: url('../img/sect-about-bg-desk.png');
   background-repeat: no-repeat;
-  background-position: top 94px right 50px;
+  background-position: top 94px right 100px;
 }
 
 .section-about__heading {
@@ -1642,7 +1642,7 @@ ul {
 
 .section-about__text {
   margin-bottom: 30px;
-  max-width: 634px;
+  width: 58%;
 }
 
 .section-about__slogan {
@@ -1752,7 +1752,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 920px;
+  width: 83%;
 }
 
 .section-about__textarea {
@@ -1899,15 +1899,15 @@ ul {
 
 .footer__social-list {
   display: flex;
-  padding-left: 4px;
+  align-items: center;
 }
 
 .social-list__item:not(:last-child) {
-  margin-right: 24px;
+  margin-right: 21px;
 }
 
 .footer__logo {
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 
 .footer__logo:focus {
