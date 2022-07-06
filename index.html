@@ -7,9 +7,12 @@
   <title>W-Wave Radio</title>
   <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.0/dist/accordion.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@8.2.4/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script defer src="https://unpkg.com/accordion-js@3.3.0/dist/accordion.min.js"></script>
   <script defer src="https://unpkg.com/swiper@8.2.4/swiper-bundle.min.js"></script>
+  <script defer src="./js/accordion.js"></script>
   <script defer src="./js/swiper.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
@@ -17,6 +20,14 @@
 <body>
   <header class="header">
     <div class="header-top">
+      <div class="header-top__logo-wrapper_mobile">
+        <div class="container header-top__container">
+          <img src="./img/header-logo.svg" alt="Логотип W-Wave Radio" class="header-top__logo_mobile">
+          <button class="btn header-top__sign-in-btn header-top__sign-in-btn_mobile">
+            Вход
+          </button>
+        </div>
+      </div>
       <div class="container header-top__container">
         <img src="./img/header-logo.svg" alt="Логотип W-Wave Radio" class="header-top__logo">
         <nav class="header-top__nav">
@@ -48,17 +59,19 @@
             </li>
           </ul>
         </nav>
-        <form class="search-form header-top__search-form">
-          <button aria-label="Поиск по сайту" class="search-form__button btn">
-            <svg class="search-form__icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <div class="header-top__controls">
+          <form class="search-form header-top__search-form">
+            <button aria-label="Поиск по сайту" class="search-form__button btn">
+              <svg class="search-form__icon" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+          <button class="btn header-top__sign-in-btn">
+            Вход
           </button>
-        </form>
-        <button class="header-top__sign-in-btn btn">
-          Вход
-        </button>
+        </div>
       </div>
     </div>
     <div class="header-bottom">
@@ -872,141 +885,153 @@
           <div class="section-quests__accordion-wrapper">
             <ul class="accordion">
               <!-- item1 -->
-              <li class="accordion__item accordion__item_active accordion-item">
-                <button class="accordion-item__trigger-btn btn">
+              <li class="accordion__item accordion-item">
+                <button type="button" class="accordion__trigger-btn btn">
                   Блогеры
-                  <svg class="accordion-item__btn-arrow rotate" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="accordion__btn-arrow" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                   </svg>
                 </button>
-                <div class="accordion-item__content">
-                  <a href="#" class="accordion-item__content-link" data-path="denisov">Сергей Денисов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="mechnikov">Матвей Мечников</a>
-                  <a href="#" class="accordion-item__content-link" data-path="prusino">Константин Прусино</a>
-                  <a href="#" class="accordion-item__content-link" data-path="kalitnikov">Иван Калитников</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Евгений Войновский</a>
-                  <a href="#" class="accordion-item__content-link accordion-item__content-link_active" data-path="martynova">Ольга Мартынова</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Дмитрий Михалок</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Пётр Пиотровский</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Олег Свиридовский</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Владислав Кауперс</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Михаил Пожитников</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Георгий Полуян</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Денис Тельман</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Юрий Горин</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Максим Сергеев</a>
+                <div class="accordion__content accordion-content">
+                  <div class="accordion-content__links-list">
+                    <a href="#" class="accordion-content__link" data-path="denisov">Сергей Денисов</a>
+                    <a href="#" class="accordion-content__link" data-path="mechnikov">Матвей Мечников</a>
+                    <a href="#" class="accordion-content__link" data-path="prusino">Константин Прусино</a>
+                    <a href="#" class="accordion-content__link" data-path="kalitnikov">Иван Калитников</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Евгений Войновский</a>
+                    <a href="#" class="accordion-content__link accordion-content__link_active" data-path="martynova">Ольга Мартынова</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Дмитрий Михалок</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Пётр Пиотровский</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Олег Свиридовский</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Владислав Кауперс</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Михаил Пожитников</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Георгий Полуян</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Денис Тельман</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Юрий Горин</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Максим Сергеев</a>
+                  </div>
                 </div>
               </li>
               <!-- item2 -->
               <li class="accordion__item accordion-item">
-                <button class="accordion-item__trigger-btn btn">
+                <button class="accordion__trigger-btn btn">
                   Арт-критики
-                  <svg class="accordion-item__btn-arrow" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="accordion__btn-arrow" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                   </svg>
                 </button>
-                <div class=" accordion-item__content">
-                  <a href="#" class="accordion-item__content-link" data-path="vasileva">Елена Васильева</a>
-                  <a href="#" class="accordion-item__content-link" data-path="pak">Минхо Пак</a>
-                  <a href="#" class="accordion-item__content-link" data-path="danilova">Марина Данилова</a>
-                  <a href="#" class="accordion-item__content-link" data-path="sverdlov">Роман Свердлов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Пётр Лапин</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Елизавета Ивлева</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Мария Кузнецова</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Степан Круглов</a>
+                <div class=" accordion__content">
+                  <div class="accordion-content__links-list">
+                    <a href="#" class="accordion-content__link" data-path="vasileva">Елена Васильева</a>
+                    <a href="#" class="accordion-content__link" data-path="pak">Минхо Пак</a>
+                    <a href="#" class="accordion-content__link" data-path="danilova">Марина Данилова</a>
+                    <a href="#" class="accordion-content__link" data-path="sverdlov">Роман Свердлов</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Пётр Лапин</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Елизавета Ивлева</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Мария Кузнецова</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Степан Круглов</a>
+                  </div>
                 </div>
               </li>
               <!-- item3 -->
               <li class="accordion__item accordion-item">
-                <button class="accordion-item__trigger-btn btn">
+                <button class="accordion__trigger-btn btn">
                   Художники
-                  <svg class="accordion-item__btn-arrow" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="accordion__btn-arrow" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                   </svg>
                 </button>
-                <div class="accordion-item__content">
-                  <a href="#" class="accordion-item__content-link" data-path="nazarova">Юлия Назарова</a>
-                  <a href="#" class="accordion-item__content-link" data-path="zhadan">Илья Жадан</a>
-                  <a href="#" class="accordion-item__content-link" data-path="ozerova">Наталия Озерова</a>
-                  <a href="#" class="accordion-item__content-link" data-path="kazanov">Игорь Казанов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Михаил Носов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Павел Иванов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Сергей Зиненко</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Мария Фёдорова</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Николай Лоев</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Есения Лозовая</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Карина Мельник</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Рамиль Мустаев</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Ольга Донская</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Кирилл Ильин</a>
+                <div class="accordion__content">
+                  <div class="accordion-content__links-list">
+                    <a href="#" class="accordion-content__link" data-path="nazarova">Юлия Назарова</a>
+                    <a href="#" class="accordion-content__link" data-path="zhadan">Илья Жадан</a>
+                    <a href="#" class="accordion-content__link" data-path="ozerova">Наталия Озерова</a>
+                    <a href="#" class="accordion-content__link" data-path="kazanov">Игорь Казанов</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Михаил Носов</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Павел Иванов</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Сергей Зиненко</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Мария Фёдорова</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Николай Лоев</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Есения Лозовая</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Карина Мельник</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Рамиль Мустаев</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Ольга Донская</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Кирилл Ильин</a>
+                  </div>
                 </div>
               </li>
               <!-- item4 -->
               <li class="accordion__item accordion-item">
-                <button class="accordion-item__trigger-btn btn">
+                <button class="accordion__trigger-btn btn">
                   Люди науки
-                  <svg class="accordion-item__btn-arrow" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="accordion__btn-arrow" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                   </svg>
                 </button>
-                <div class="accordion-item__content">
-                  <a href="#" class="accordion-item__content-link" data-path="lurie">Юваль Лурье</a>
-                  <a href="#" class="accordion-item__content-link" data-path="bulgakova">Оксана Булгакова</a>
-                  <a href="#" class="accordion-item__content-link" data-path="dubov">Назар Дубов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="faure">Жаклин Фауре</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Леонид Быков</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Захар Дорохов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Николай Коваль</a>
+                <div class="accordion__content">
+                  <div class="accordion-content__links-list">
+                    <a href="#" class="accordion-content__link" data-path="lurie">Юваль Лурье</a>
+                    <a href="#" class="accordion-content__link" data-path="bulgakova">Оксана Булгакова</a>
+                    <a href="#" class="accordion-content__link" data-path="dubov">Назар Дубов</a>
+                    <a href="#" class="accordion-content__link" data-path="faure">Жаклин Фауре</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Леонид Быков</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Захар Дорохов</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Николай Коваль</a>
+                  </div>
                 </div>
               </li>
               <!-- item5 -->
               <li class="accordion__item accordion-item">
-                <button class="accordion-item__trigger-btn btn">
+                <button class="accordion__trigger-btn btn">
                   Историки
-                  <svg class="accordion-item__btn-arrow" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="accordion__btn-arrow" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                   </svg>
                 </button>
-                <div class="accordion-item__content">
-                  <a href="#" class="accordion-item__content-link" data-path="default">Захар Миронов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Юрий Громов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Елизавета Виль</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Наталья Чумак</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Филипп Бутко</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Юна Брагина</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Никита Котов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Дина Уварова</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Майя Полищук</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Борис Рябов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Герман Авдеев</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Устин Белов</a>
+                <div class="accordion__content">
+                  <div class="accordion-content__links-list">
+                    <a href="#" class="accordion-content__link" data-path="default">Захар Миронов</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Юрий Громов</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Елизавета Виль</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Наталья Чумак</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Филипп Бутко</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Юна Брагина</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Никита Котов</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Дина Уварова</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Майя Полищук</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Борис Рябов</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Герман Авдеев</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Устин Белов</a>
+                  </div>
                 </div>
               </li>
               <!-- item6 -->
               <li class="accordion__item accordion-item">
-                <button class="accordion-item__trigger-btn btn">
+                <button class="accordion__trigger-btn btn">
                   Филологи
-                  <svg class="accordion-item__btn-arrow" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="accordion__btn-arrow" width="42" height="42" viewbox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
                     <path d="M13 19L21 27L29 19" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
                   </svg>
                 </button>
-                <div class="accordion-item__content">
-                  <a href="#" class="accordion-item__content-link" data-path="default">Прохор Петрик</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Юрий Гайчук</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Юлия Белякова</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Дмитрий Орлов</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Иван Доронин</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">София Лапина</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Александр Тягай</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Ольга Кузнецова</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Евгения Романова</a>
-                  <a href="#" class="accordion-item__content-link" data-path="default">Ирина Шашкова</a>
+                <div class="accordion__content">
+                  <div class="accordion-content__links-list">
+                    <a href="#" class="accordion-content__link" data-path="default">Прохор Петрик</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Юрий Гайчук</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Юлия Белякова</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Дмитрий Орлов</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Иван Доронин</a>
+                    <a href="#" class="accordion-content__link" data-path="default">София Лапина</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Александр Тягай</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Ольга Кузнецова</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Евгения Романова</a>
+                    <a href="#" class="accordion-content__link" data-path="default">Ирина Шашкова</a>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -1565,7 +1590,7 @@
 
           <div class="section-playlists__age-rating-block">
             <div class="section-playlists__age-rating-desc">
-              Раздел «Плейлисты» может содержать информацию, не предназначенную для несовершеннолетних.
+              Раздел «Плейлисты» может содержать информацию, не предназначенную для&nbsp;несовершеннолетних.
             </div>
             <div class="section-playlists__copyright">
               &#169; 2021 &#124; W-Wave
@@ -1582,7 +1607,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_ploho playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/ploho.jpg" alt="Ploho" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/ploho-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/ploho.jpg" alt="Ploho" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/rus.svg" alt="Россия">
                   </div>
@@ -1601,7 +1629,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_molchat-doma playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/molchat-doma.jpg" alt="Molchat Doma" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/molchat-doma-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/molchat-doma.jpg" alt="Molchat Doma" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/rus.svg" alt="Россия">
                   </div>
@@ -1620,7 +1651,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_motorama playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/motorama.jpg" alt="Motorama" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/motorama-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/motorama.jpg" alt="Motorama" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/rus.svg" alt="Россия">
                   </div>
@@ -1639,7 +1673,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_human-tetris playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/human-tetris.jpg" alt="Human Tetris" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/human-tetris-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/human-tetris.jpg" alt="Human Tetris" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/rus.svg" alt="Россия">
                   </div>
@@ -1658,7 +1695,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_buerak playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/buerak.jpg" alt="Буерак" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/buerak-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/buerak.jpg" alt="Буерак" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/rus.svg" alt="Россия">
                   </div>
@@ -1677,7 +1717,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_july-days playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/july-days.jpg" alt="Июльские Дни" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/july-days-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/july-days.jpg" alt="Июльские Дни" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/rus.svg" alt="Россия">
                   </div>
@@ -1696,7 +1739,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_joy-division playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/joy-division.jpg" alt="Joy Division" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/joy-division-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/joy-division.jpg" alt="Joy Division" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/uk.svg" alt="Великобритания">
                   </div>
@@ -1715,7 +1761,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_the-cure playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/the-cure.jpg" alt="The Cure" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/the-cure-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/the-cure.jpg" alt="The Cure" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/uk.svg" alt="Великобритания">
                   </div>
@@ -1734,7 +1783,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_the-smiths playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/the-smiths.jpg" alt="The Smiths" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/the-smiths-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/the-smiths.jpg" alt="The Smiths" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/uk.svg" alt="Великобритания">
                   </div>
@@ -1753,7 +1805,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_new-order playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/new-order.jpg" alt="New Order" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/new-order-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/new-order.jpg" alt="New Order" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/uk.svg" alt="Великобритания">
                   </div>
@@ -1772,7 +1827,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_bauhaus playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/bauhaus.jpg" alt="Bauhaus" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/bauhaus-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/bauhaus.jpg" alt="Bauhaus" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/uk.svg" alt="Великобритания">
                   </div>
@@ -1791,7 +1849,10 @@
               <div class="section-playlists__playlist-card section-playlists__playlist-card_gang-of-four playlist-card">
                 <button class="btn playlist-card__play-button"></button>
                 <div class="playlist-card__preview">
-                  <img src="./img/gang-of-four.jpg" alt="Gang Of Four" class="playlist-card__img" aria-hidden="true">
+                  <picture>
+                    <source srcset="./img/gang-of-four-112.jpg" media="(max-width: 1024px)">
+                    <img src="./img/gang-of-four.jpg" alt="Gang Of Four" class="playlist-card__img" aria-hidden="true">
+                  </picture>
                   <div class="playlist-card__country">
                     <img src="./img/uk.svg" alt="Великобритания">
                   </div>
@@ -1808,12 +1869,25 @@
             </li>
           </ul>
         </div>
+
+        <div class="section-playlists__age-rating-block section-playlists__age-rating-block_mobile">
+          <div class="section-playlists__age-rating-desc">
+            Раздел «Плейлисты» может содержать информацию, не предназначенную для&nbsp;несовершеннолетних.
+          </div>
+          <div class="section-playlists__copyright">
+            &#169; 2021 &#124; W-Wave
+          </div>
+          <div class="section-playlists__age-value">
+            18+
+          </div>
+        </div>
       </div>
     </section>
 
 <!-- section-promo -->
     <section class="section-promo">
       <div class="container section-promo__container">
+        <div class="section-promo__image"></div>
         <div class="section-promo__content">
           <h2 class="section-heading section-promo__heading">
             Будь с нами на одной волне!
@@ -1856,7 +1930,7 @@
             Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!
           </p>
           <p class="section-about__desc">
-            Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы можете поделиться обратной связью о наших передачах, темах, подборках и вообще обо всём! Это можно сделать либо написав нам в форме ниже, либо кликнув на наши соцсети в подвале сайта. Спасибо! Услышимся! :)
+            Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы можете поделиться обратной связью о наших передачах, темах, подборках и вообще обо всём! Это можно сделать либо написав нам в форме ниже, либо кликнув на наши соцсети в подвале сайта. Спасибо! Услышимся!:)
           </p>
         </div>
         <div class="buttons-swiper">
@@ -1865,51 +1939,87 @@
         </div>
         <div class="swiper">
           <ul class="swiper-wrapper section-about__list">
-            <li class="swiper-slide section-about__item section-about__item_gutenberg">
-              <h3 class="about-card__heading">
+            <li class="swiper-slide section-about__item about-item">
+              <div class="about-item__picture">
+                <picture>
+                  <source srcset="./img/about-gutenberg-1024.jpg" media="(max-width: 1024px)">
+                  <img src="./img/about-gutenberg.jpg" alt="" aria-hidden="true">
+                </picture>
+              </div>
+              <h3 class="about-item__heading">
                 Дмитрий Гутенберг
               </h3>
-              <p class="about-card__desc">
+              <p class="about-item__desc">
                 Эксперт (ну, почти) по всем вопросам (почти).
               </p>
             </li>
-            <li class="swiper-slide section-about__item section-about__item_vasileva">
-              <h3 class="about-card__heading">
+            <li class="swiper-slide section-about__item about-item">
+              <div class="about-item__picture">
+                <picture>
+                  <source srcset="./img/about-vasileva-1024.jpg" media="(max-width: 1024px)">
+                  <img src="./img/about-vasileva.jpg" alt="" aria-hidden="true">
+                </picture>
+              </div>
+              <h3 class="about-item__heading">
                 Анна Васильева
               </h3>
-              <p class="about-card__desc">
+              <p class="about-item__desc">
                 Как я здесь оказалась? А&nbsp;главное — зачем?
               </p>
             </li>
-            <li class="swiper-slide section-about__item section-about__item_dmitrievsky">
-              <h3 class="about-card__heading">
+            <li class="swiper-slide section-about__item about-item">
+              <div class="about-item__picture">
+                <picture>
+                  <source srcset="./img/about-dmitrievsky-1024.jpg" media="(max-width: 1024px)">
+                  <img src="./img/about-dmitrievsky.jpg" alt="" aria-hidden="true">
+                </picture>
+              </div>
+              <h3 class="about-item__heading">
                 Пётр Дмитриевский
               </h3>
-              <p class="about-card__desc">
-                Господа! Внимание!! Благодарю за&nbsp;внимание!!!
+              <p class="about-item__desc">
+                Господа! Внимание! Благодарю за&nbsp;внимание!
               </p>
             </li>
-            <li class="swiper-slide section-about__item section-about__item_fleganova">
-              <h3 class="about-card__heading">
+            <li class="swiper-slide section-about__item about-item">
+              <div class="about-item__picture">
+                <picture>
+                  <source srcset="./img/about-fleganova-1024.jpg" media="(max-width: 1024px)">
+                  <img src="./img/about-fleganova.jpg" alt="" aria-hidden="true">
+                </picture>
+              </div>
+              <h3 class="about-item__heading">
                 Татьяна Флеганова
               </h3>
-              <p class="about-card__desc">
+              <p class="about-item__desc">
                 Одна я в пальто стою красивая, а&nbsp;вокруг...
               </p>
             </li>
-            <li class="swiper-slide section-about__item section-about__item_prokopiev">
-              <h3 class="about-card__heading">
+            <li class="swiper-slide section-about__item about-item">
+              <div class="about-item__picture">
+                <picture>
+                  <source srcset="./img/about-prokopiev-1024.jpg" media="(max-width: 1024px)">
+                  <img src="./img/about-prokopiev.jpg" alt="" aria-hidden="true">
+                </picture>
+              </div>
+              <h3 class="about-item__heading">
                 Фёдор Прокопьев
               </h3>
-              <p class="about-card__desc">
+              <p class="about-item__desc">
                 Привет! Я фотограф, музыкант, ведущий
               </p>
             </li>
-            <li class="swiper-slide section-about__item section-about__item_kortneva">
-              <h3 class="about-card__heading">
+            <li class="swiper-slide section-about__item about-item">
+              <div class="about-item__picture">
+                <picture>
+                  <source srcset="./img/about-kortneva-1024.jpg" media="(max-width: 1024px)">
+                  <img src="./img/about-kortneva.jpg" alt="" aria-hidden="true">
+                </picture>
+              </div>
+              <h3 class="about-item__heading">
                 Светлана Кортнева
               </h3>
-              <p class="about-card__desc">
+              <p class="about-item__desc">
                 Художник-оформитель. Оформляю
               </p>
             </li>
@@ -1919,7 +2029,7 @@
           <textarea name="message" placeholder="Что скажете?" class="section-about__textarea"></textarea>
           <div class="section-about__input-wrapper">
             <input type="text" name="name" placeholder="Имя" class="section-about__input">
-            <input type="email" name="e-mail" placeholder="E-mail" class="section-about__input">
+            <input type="email" name="e-mail" placeholder="Email" class="section-about__input">
           </div>
           <button type="submit" class="btn section-about__submit-button">
             Отправить
