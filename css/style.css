@@ -703,7 +703,10 @@ picture {
   margin-right: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+.broadcasts-left__top-block {
+  margin-bottom: 227px;
 }
 
 .broadcasts-left__bottom-block {
@@ -892,38 +895,41 @@ picture {
 }
 
 .section-broadcasts__item {
-  flex: 0 1 calc(33.3% - 15px);
-  padding-top: 148px;
-  max-width: 255px;
-  background-repeat: no-repeat;
-  background-position: top center;
+  flex: 0 1 calc(33.3% - 19px);
 }
 
 .section-broadcasts__item:nth-child(-n+3) {
   margin-bottom: 30px;
 }
 
-.section-broadcasts__item_people {
+.broadcasts-item__background {
+  padding-top: 148px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.broadcasts-item__background_people {
   background-image: url('../img/people-books.jpg');
 }
 
-.section-broadcasts__item_graphomania {
+.broadcasts-item__background_graphomania {
   background-image: url('../img/graphomania.jpg');
 }
 
-.section-broadcasts__item_rome {
+.broadcasts-item__background_rome {
   background-image: url('../img/rome.jpg');
 }
 
-.section-broadcasts__item_erudite {
+.broadcasts-item__background_erudite {
   background-image: url('../img/erudite.jpg');
 }
 
-.section-broadcasts__item_eras {
+.broadcasts-item__background_eras {
   background-image: url('../img/eras.jpg');
 }
 
-.section-broadcasts__item_thoughts {
+.broadcasts-item__background_thoughts {
   background-image: url('../img/thoughts.jpg');
 }
 
@@ -1017,13 +1023,9 @@ picture {
   justify-content: space-between;
 }
 
-.section-quests__accordion-wrapper {
+.accordion {
   flex-grow: 1;
   margin-right: 30px;
-}
-
-.accordion {
-  max-width: 730px;
 }
 
 .accordion__trigger-btn {
@@ -1153,80 +1155,84 @@ picture {
 
 .section-guests__guest-card {
   display: none;
-  padding-top: 234px;
-  background-repeat: no-repeat;
-  background-position: top center;
 }
 
 .guest-card_active {
   display: block;
 }
 
-.section-guests__guest-card_denisov {
+.guest-card__background {
+  margin-bottom: 14px;
+  padding-top: 220px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.guest-card__background_denisov {
   background-image: url('../img/denisov.jpg');
 }
 
-.section-guests__guest-card_mechnikov {
+.guest-card__background_mechnikov {
   background-image: url('../img/mechnikov.jpg');
 }
 
-.section-guests__guest-card_prusino {
+.guest-card__background_prusino {
   background-image: url('../img/prusino.jpg');
 }
 
-.section-guests__guest-card_kalitnikov {
+.guest-card__background_kalitnikov {
   background-image: url('../img/kalitnikov.jpg');
 }
 
-.section-guests__guest-card_martynova {
+.guest-card__background_martynova {
   background-image: url('../img/martynova.jpg');
 }
 
-.section-guests__guest-card_vasileva {
+.guest-card__background_vasileva {
   background-image: url('../img/vasileva.jpg');
 }
 
-.section-guests__guest-card_pak {
+.guest-card__background_pak {
   background-image: url('../img/pak.jpg');
 }
 
-.section-guests__guest-card_danilova {
+.guest-card__background_danilova {
   background-image: url('../img/danilova.jpg');
 }
 
-.section-guests__guest-card_sverdlov {
+.guest-card__background_sverdlov {
   background-image: url('../img/sverdlov.jpg');
 }
 
-.section-guests__guest-card_nazarova {
+.guest-card__background_nazarova {
   background-image: url('../img/nazarova.jpg');
 }
 
-.section-guests__guest-card_zhadan {
+.guest-card__background_zhadan {
   background-image: url('../img/zhadan.jpg');
 }
 
-.section-guests__guest-card_ozerova {
+.guest-card__background_ozerova {
   background-image: url('../img/ozerova.jpg');
 }
 
-.section-guests__guest-card_kazanov {
+.guest-card__background_kazanov {
   background-image: url('../img/kazanov.jpg');
 }
 
-.section-guests__guest-card_lurie {
+.guest-card__background_lurie {
   background-image: url('../img/lurie.jpg');
 }
 
-.section-guests__guest-card_bulgakova {
+.guest-card__background_bulgakova {
   background-image: url('../img/bulgakova.jpg');
 }
 
-.section-guests__guest-card_dubov {
+.guest-card__background_dubov {
   background-image: url('../img/dubov.jpg');
 }
 
-.section-guests__guest-card_faure {
+.guest-card__background_faure {
   background-image: url('../img/faure.jpg');
 }
 
@@ -1674,13 +1680,13 @@ picture {
 .section-about__container {
   padding-top: 94px;
   padding-bottom: 94px;
-  background-image: url('../img/sect-about-bg-desk.png');
-  background-repeat: no-repeat;
-  background-position: top 94px right 100px;
+  background-image: url('../img/section-about-spiral.png'), url('../img/section-about-bg.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 93px right 383px, top 112px right 100px;
 }
 
 .section-about__heading {
-  margin-bottom: 18px;
+  margin-bottom: 12px;
   color: var(--white);
 }
 
@@ -1690,9 +1696,10 @@ picture {
 }
 
 .section-about__slogan {
-  margin-bottom: 13px;
+  margin-bottom: 10px;
   font-size: 20px;
   font-weight: 700;
+  line-height: 1.5;
   color: var(--grey);
 }
 
@@ -1976,4 +1983,147 @@ picture {
 
 .footer__copyright-text {
   color: var(--grey);
+}
+
+/* media 1200 */
+@media (max-width: 1200px) {
+  .on-air__desc {
+    width: 90px;
+  }
+
+  .section-broadcasts__item {
+    flex: 0 1 calc(50% - 15px);
+  }
+
+  .section-guests__guest-wrapper {
+    width: 255px;
+  }
+
+  .guest-card__background {
+    padding-top: 159px;
+    background-size: contain;
+  }
+
+  .section-guests__guest-card_default {
+    padding: 112px 0 33px;
+    background-position: top 31px center;
+    background-size: 73px;
+  }
+
+  .guest-card__desc_default {
+    font-size: 14px;
+  }
+
+  .section-playlists__container {
+    padding-left: 85px;
+    flex-direction: column;
+  }
+
+  .section-playlists__radio-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-height: 185px;
+    width: 66%;
+  }
+
+  .section-playlists__radio-item {
+    margin-right: 35px;
+  }
+
+  .section-playlists__card-list {
+    margin-bottom: 26px;
+  }
+
+  .section-playlists__card-item {
+    display: block;
+    width: 33.3%;
+  }
+
+  .section-playlists__playlist-card {
+    flex-direction: row;
+  }
+
+  .playlist-card__text-content {
+    width: 100%;
+  }
+
+  .section-playlists__age-rating-block {
+    display: none;
+  }
+
+  .section-playlists__age-rating-block_mobile {
+    display: block;
+    padding: 0px 15px 0 15px;
+    border-top: none;
+  }
+
+  .section-playlists__age-rating-desc {
+    padding-top: 38px;
+    border-top: 1px solid var(--shade-grey);
+  }
+
+  .section-playlists__left-block {
+    margin-right: 0;
+    padding: 0 15px;
+  }
+
+  .section-about__container {
+    background-image: none, url('../img/section-about-bg.png');
+  }
+
+  .section-promo__image {
+    width: calc(50% - 30px);
+  }
+
+  .section-promo__content {
+    width: 50%;
+  }
+
+  .section-about__text {
+    width: 66%;
+  }
+}
+
+/* media 1024 */
+@media (max-width: 1024px) {
+  .header-top__logo-wrapper_mobile {
+    display: block;
+  }
+
+  .header-top__logo {
+    display: none;
+  }
+
+  .header-top__nav {
+    padding-left: 0;
+  }
+
+  .header-bottom__on-air {
+    margin-right: 0;
+  }
+
+  .header-bottom__age-rating {
+    display: none;
+  }
+
+  .section-hero__container {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-size: 256px 265px;
+    background-position: center right 100px;
+  }
+
+  .section-hero__content {
+    width: 67%;
+  }
+
+  .accordion-content__links-list {
+    column-gap: 0;
+  }
+
+  .section-about__form {
+    width: 100%;
+  }
 }
