@@ -120,6 +120,11 @@ picture {
   padding-bottom: 20px;
 }
 
+.header-top__container_mobile {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
 .header-top__logo-wrapper_mobile {
   display: none;
   background-color: var(--light-grey);
@@ -138,8 +143,8 @@ picture {
 .header-top__nav {
   display: flex;
   flex-grow: 1;
-  margin-right: 20px;
-  padding-left: 20px;
+  margin-right: 23px;
+  padding-left: 23px;
   max-width: 661px;
 }
 
@@ -151,6 +156,7 @@ picture {
 
 .header-top__item {
   display: block;
+  margin: 0 -3px;
 }
 
 .header-top__link {
@@ -254,6 +260,10 @@ picture {
   justify-content: space-between;
   margin-right: 20px;
   max-width: 613px;
+}
+
+.header-bottom__item {
+  margin: 0 -3px;
 }
 
 .header-bottom__link {
@@ -1046,6 +1056,7 @@ picture {
 }
 
 .accordion__trigger-btn .accordion__btn-arrow {
+  margin-right: 4px;
   transition: fill .3s ease-in, transform .5s;
 }
 
@@ -2016,6 +2027,7 @@ picture {
 
   .section-playlists__container {
     padding-left: 85px;
+    padding-bottom: 94px;
     flex-direction: column;
   }
 
@@ -2025,11 +2037,23 @@ picture {
     align-items: flex-start;
     flex-wrap: wrap;
     max-height: 185px;
-    width: 66%;
+    width: 60%;
   }
+
+  .section-playlists__radio-block {
+    margin-bottom: 2px;
+}
 
   .section-playlists__radio-item {
     margin-right: 35px;
+  }
+
+  .section-playlists__radio-item:not(:last-child) {
+    margin-bottom: 19px;
+}
+
+  .section-playlists__radio-label::before {
+    margin-right: 14px;
   }
 
   .section-playlists__card-list {
@@ -2046,8 +2070,18 @@ picture {
   }
 
   .playlist-card__text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 0 10px 8px;
     width: 100%;
   }
+
+  .playlist-card__country {
+    left: 0;
+    right: inherit;
+}
 
   .section-playlists__age-rating-block {
     display: none;
@@ -2073,13 +2107,22 @@ picture {
     background-image: none, url('../img/section-about-bg.png');
   }
 
+  .section-promo__container {
+    padding-bottom: 94px;
+}
+
   .section-promo__image {
-    width: calc(50% - 30px);
+    width: 50%;
+    background-position: top 42% left;
   }
 
   .section-promo__content {
     width: 50%;
   }
+
+  .section-promo__wave-line {
+    background-position: center right 17px;
+}
 
   .section-about__text {
     width: 66%;
@@ -2097,11 +2140,25 @@ picture {
   }
 
   .header-top__nav {
+    margin-right: 36px;
     padding-left: 0;
+  }
+
+  .header-bottom__container {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .header-bottom__list {
+    margin-right: 30px;
   }
 
   .header-bottom__on-air {
     margin-right: 0;
+  }
+
+  .on-air__block {
+    padding: 0 15px;
   }
 
   .header-bottom__age-rating {
@@ -2119,8 +2176,28 @@ picture {
     width: 67%;
   }
 
+  .section-hero__desc {
+    margin-bottom: 22px;
+}
+
   .accordion-content__links-list {
     column-gap: 0;
+  }
+
+  .section-about__container {
+    background-position: top 143px right 100px;
+  }
+
+  .swiper-button-prev {
+    left: -67px;
+  }
+
+  .swiper-button-next {
+    right: -70px;
+  }
+
+  .section-about__item {
+    margin-bottom: 36px;
   }
 
   .section-about__form {
